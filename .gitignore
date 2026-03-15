@@ -7,3 +7,4 @@
 *.webp
 .env
 __pycache__/
+.gradio/
