@@ -1,29 +1,77 @@
-name: Sync and Keep Alive
+name: Sync to Hugging Face Hub
+
+
 
 on:
+
+
+
   push:
-    branches: [main]
-  # --- ADDED THIS SECTION ---
-  schedule:
-    - cron: '0 0 * * *'  # Runs every 24 hours at midnight UTC
-  # --------------------------
-  workflow_dispatch:
+
+
+
+    branches: [main]       # Triggered every time you 'git push' to the main branch
+
+
+
+  workflow_dispatch:      # Allows you to click a button to run this manually
+
+
+
+
+
+
 
 jobs:
-  sync-to-hub:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          lfs: true
 
-      - name: Push to hub and Wake Space
+
+
+  sync-to-hub:
+
+
+
+    runs-on: ubuntu-latest
+
+
+
+    steps:
+
+
+
+      - uses: actions/checkout@v3
+
+
+
+        with:
+
+
+
+          fetch-depth: 0   # Downloads the full history (required for pushing to a new repo)
+
+
+
+          lfs: true        # Includes Large File Storage (good for AI models)
+
+
+
+      
+
+
+
+      - name: Push to hub
+
+
+
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: |
-          # Syncs the code
-          git push --force https://Vijayshete04:$HF_TOKEN@huggingface.co/spaces/Vijayshete04/Multimodal-AI-Medical-Assistant main
-          
-          # Explicitly pings the Space to ensure it is awake
-          curl -I -L https://huggingface.co/spaces/Vijayshete04/Multimodal-AI-Medical-Assistant
+
+
+
+          HF_TOKEN: ${{ secrets.HF_TOKEN }} # Pulls the secret you saved in GitHub Settings
+
+
+
+        run: git push --force https://Vijayshete04:$HF_TOKEN@huggingface.co/spaces/Vijayshete04/Multimodal-AI-Medical-Assistant main
+
+
+
+this ocde already have in workflow 
