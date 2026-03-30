@@ -220,7 +220,7 @@ if __name__ == "__main__":
     # max_threads=1 is safer for Windows file operations
     # Do NOT use share=True or specify a different port
     demo.launch(
-    share=True,
+    share=False,
     server_name="0.0.0.0",
     server_port=7860,
     max_threads=40
