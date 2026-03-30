@@ -50,7 +50,9 @@ Start by cloning the repository to your local machine:
 
 ```bash
 git clone https://github.com/Vijayshete04/Multimodal-AI-Medical-Assistant-Vision-to-Voice-
-cd AI_MEDICAL_BOT
+cd C:\Users\Vijay_Shete\ai-doctor-2.0-voice-and-vision
+pipenv shell
+
 ```
 
 ### 2. Create and Activate a Virtual Environment
