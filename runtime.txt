@@ -1,0 +1,2 @@
+cd C:\Users\Vijay_Shete\ai-doctor-2.0-voice-and-vision
+echo python-3.11.0 > runtime.txt
