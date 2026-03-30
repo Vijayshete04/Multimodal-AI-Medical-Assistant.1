@@ -19,7 +19,7 @@ An interactive medical assistant that combines **vision** and **voice** capabili
 
 You can access the live deployment of this AI Medical Bot on Hugging Face Spaces:
 
-[AI Medical Bot on Hugging Face Spaces](https://huggingface.co/spaces/Vijayshete04/Multimodal-AI-Medical-Assistant)
+[AI Medical Bot on Hugging Face Spaces](https://huggingface.co/spaces/Vijayshete04/Multimodal-AI-Medical-Assistant.1)
 
 ---
 
@@ -49,7 +49,7 @@ To run this project, you need the following:
 Start by cloning the repository to your local machine:
 
 ```bash
-git clone https://github.com/Vijayshete04/Multimodal-AI-Medical-Assistant-Vision-to-Voice-
+git clone https://github.com/Vijayshete04/Multimodal-AI-Medical-Assistant.1.git
 cd C:\Users\Vijay_Shete\ai-doctor-2.0-voice-and-vision
 pipenv shell
 
